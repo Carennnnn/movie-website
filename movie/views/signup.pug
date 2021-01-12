@@ -1,0 +1,26 @@
+doctype html
+meta(charset='UTF-8')
+title Enjoy movie
+head
+  link(rel='stylesheet' href='css/signup_style.css')
+
+include  ./partials/header.pug
+
+.userInformation
+  
+  .login-information
+    form(method='POST' action='/signup')
+      h2 Create an account
+      .create.account
+        label Enter a username:
+        br
+        input#username(type='text' name='username' required)
+        br
+        br
+        label Enter a password:
+        input#password(type='text' name='password' required)
+        br
+        br
+        button#signup(type='submit') Create account
+        br
+        br

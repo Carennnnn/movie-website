@@ -1,0 +1,49 @@
+doctype html
+meta(charset='UTF-8')
+title Enjoy movie
+head
+  link(rel='stylesheet', href='/css/home_style.css')
+
+include  ./partials/header.pug
+
+if session.loggedin
+  .logout(style='float:right')
+    button#logout.logout-button(onclick='/logout')
+      a(href='/logout') Log out
+  .userInformation
+    #photo
+      img(src='https://image.flaticon.com/icons/png/512/149/149071.png' alt='user photo' width='100' height='100')
+    .personalInfo
+      .name
+        h3(style="display: inline") Name: 
+        h3#username(style="display: inline") !{user.username}
+      .account
+        h3(style="display: inline") Account Type: 
+        h3#accountType(style="display: inline") !{user.accountType}
+      button#switchAccount(type='button') Switch account
+      br
+      br
+  .peopleFollowing
+    label People I followed
+    br
+  .peopleFollowing
+    label Users I followed
+    br
+  .peopleFollowing
+    label Followers
+  .recommendation
+    br
+    br
+    br
+    #row.movieRow
+      label Recommended movies
+      br
+      .movieColumn
+        img(src='https://m.media-amazon.com/images/M/MV5BMjQxM2YyNjMtZjUxYy00OGYyLTg0MmQtNGE2YzNjYmUyZTY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg')
+      .movieColumn
+        img(src='https://m.media-amazon.com/images/M/MV5BYzcyMDY2YWQtYWJhYy00OGQ2LTk4NzktYWJkNDYwZWJmY2RjXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg')
+      .movieColumn
+        img(src='https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_SX300.jpg')
+
+script
+  include ../public/client.js

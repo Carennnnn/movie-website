@@ -1,0 +1,86 @@
+  .navigation {
+    overflow: hidden;
+    background-color: #7FCFF7;
+  }
+  
+  .navigation a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navigation a:hover {
+    background-color: #6CADCD;
+  }
+  
+  .navigation input[type=text] {
+    padding:6px;
+    margin-top: 6.6px;
+    margin-left: 300px;
+    float: left;
+    font-size: 17px;
+    width: 50%;
+    border: 2px solid blue;
+    border-radius: 8px;
+  }
+  
+  #searchBtn {
+    margin-top: 6.6px;
+    float: left;
+    margin-left: 3px;
+    border: none;
+    border: 2px solid black;
+  }
+
+  
+  @media screen and (max-width: 500px) {
+  
+    .navigation a, .navigation input[type=text], .navigation .container button {
+      float: center;
+      display: block;
+      text-align: center;
+      margin: 0;
+      padding: 15px;
+    }
+    
+  }
+
+  .movieColumn{
+    float:left;
+    width:14.63%;
+  }
+
+  .mColumn{
+    font-size: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    width:14.63%;
+    margin: 14px;
+    float:left;
+  }
+
+  #prevBtn {
+    font-size: 20px;
+    color: gray;
+  }
+
+  #nextBtn {
+    font-size: 20px;
+    color: gray;
+  }
+  
+  #buttonContainer {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: gray;
+  }
+
+  

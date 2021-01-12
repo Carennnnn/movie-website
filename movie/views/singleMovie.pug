@@ -1,0 +1,64 @@
+doctype html
+meta(charset='UTF-8')
+title Enjoy movie
+head
+  link(rel='stylesheet', href='/css/singleMovie_style.css')
+
+include  ./partials/header.pug
+
+.movieInformation
+  .row
+    .column.left
+      img(src=`${movie.Poster}` width='300' height='445')
+    .column.middle
+      h1 #{movie.Title}
+      p#rating 
+        b Rating: 
+        | #{movie.imdbRating}
+      p(style='color: DimGray;') 
+        |#{movie.Year} | #{movie.Runtime} | #{movie.Genre}
+      p #{movie.Plot}
+      p 
+        b Director: 
+        | #{movie.Director}
+      p 
+        b Writer: 
+        | #{movie.Writer}
+      p 
+        b Actors: 
+        | #{movie.Actors}
+
+  .movieLink
+    if movie.Link.length > 0
+      p#play Click to play:&nbsp
+      -let n = 1;
+      each l in movie.Link
+        a#url(href = l) link#{n}
+        - n += 1;
+      .addALink  
+        form(method='POST' action='/movies/' + movie._id + '/addLink') 
+          lable#linkText Add a link for the movie:&nbsp
+          input#linkInput(type='url' name='link' required)
+          button#sendurl(type='submit') Save
+    else
+      .linkMoreMargin
+        form(method='POST' action='/movies/' + movie._id + '/addLink') 
+          lable#linkText Add a link for the movie:&nbsp
+          input#linkInput(type='url' name='link' required)
+          button#sendurl(type='submit') Save
+
+.similarM
+  p#similar &nbspSimilar movies: 
+  each m in similarMovies
+    .mColumn
+      a(href='/movies/' + m._id)
+        img(src=`${m.Poster}` width='196.5' height ='290')
+      
+      - var title = m.Title  
+      p &nbsp#{title} 
+
+  .userReviews
+
+
+   
+

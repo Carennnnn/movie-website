@@ -1,0 +1,35 @@
+doctype html
+meta(charset='UTF-8')
+title Enjoy movie
+head
+  link(rel='stylesheet' href='css/movie_style.css')
+
+include  ./partials/header.pug
+
+h1 Popular movies
+
+.mDisplay
+
+  each m in movie 
+    .mColumn
+      a(href='/movies/' + m._id)
+        img(src=`${m.Poster}` width='208' height ='307')
+      
+      - var title = m.Title  
+      p &nbsp#{title} 
+
+#buttonContainer
+  if current > 1
+    - let url = '/movies?page=' + (current-1)
+    - if(qstring.length > 0){ url += "&" + qstring; };
+    button#prevBtn
+      a(href=url) Previous
+
+  - let url = '/movies?page=' + (current+1)
+  - if(qstring.length > 0){ url += "&" + qstring; }
+  button#nextBtn
+    a(href=url) Next
+
+  
+
+

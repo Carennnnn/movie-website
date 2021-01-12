@@ -1,0 +1,21 @@
+{
+    "alice": {
+        "username": "alice",
+        "password": "123",
+        "recommended_movies": [],
+        "accountType": "regular",
+        "peopleFollowed": [],
+        "usersFollowed": [],
+        "reviews": []
+    },
+
+    "grace": {
+        "username": "grace",
+        "password": "135",
+        "recommended_movies": [],
+        "accountType": "regular",
+        "peopleFollowed": [],
+        "usersFollowed": [],
+        "reviews": []
+    }
+}

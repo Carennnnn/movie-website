@@ -1,0 +1,10 @@
+.navigation
+    a#home(href='/users') HOME 
+    a#movies(href='/movies') MOVIES
+    a#login(href='/login') LOG IN
+
+    .container
+        form(action='/search' method='post')
+            input#title(type='text' placeholder='Search movie' name='title')
+            button#searchBtn(type='submit')
+                img(src='https://www.pngfind.com/pngs/m/104-1043692_search-icon-transparent-white-search-icon-apple-png.png' width='22' height='25')

@@ -1,0 +1,15 @@
+doctype html
+meta(charset='UTF-8')
+title Enjoy movie
+head
+  link(rel='stylesheet' href='css/login_style.css')
+
+include  ./partials/header.pug
+
+.allPeople
+    each p in people
+        p Name: #{p.Director}
+        p Movie: #{p.Title}
+        br
+
+        

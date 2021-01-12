@@ -1,0 +1,21 @@
+{
+  "name": "project_3",
+  "version": "1.0.0",
+  "description": "Yuelin Liu 101154473",
+  "main": "login.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.11.9",
+    "pug": "^3.0.0",
+    "session": "^0.1.0",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
